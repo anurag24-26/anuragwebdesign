@@ -1,0 +1,188 @@
+<style>
+  :root {
+    --bg-deep: #0B0B0E;
+    --surface-glass: rgba(20, 22, 28, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --accent-blue: #818cf8;
+  }
+
+  /* Glassmorphism Refinement */
+  .glass-nav {
+    background: var(--surface-glass);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.5), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.05);
+  }
+
+  /* Sophisticated Hover State */
+  .nav-link {
+    position: relative;
+    transition: color 0.4s ease, text-shadow 0.4s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -6px;
+    left: 50%;
+    background: var(--accent-blue);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translateX(-50%);
+    box-shadow: 0 0 12px var(--accent-blue);
+    opacity: 0;
+  }
+
+  .nav-link:hover::after {
+    width: 80%;
+    opacity: 1;
+  }
+
+  .nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(129, 140, 248, 0.4);
+  }
+
+  /* Premium WhatsApp Button */
+  .btn-whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 10px 20px -8px rgba(37, 211, 102, 0.5),
+                inset 0 1px 1px rgba(255, 255, 255, 0.2);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .btn-whatsapp:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 15px 25px -8px rgba(37, 211, 102, 0.6);
+  }
+
+  /* Mobile Menu Logic */
+  #mobile-menu {
+    display: none; /* Crucial: Prevents invisible blocking */
+    opacity: 0;
+    transform: translateY(-15px) scale(0.95);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 99;
+  }
+
+  #mobile-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Menu Toggle Animation */
+  #menu-toggle svg {
+    transition: transform 0.3s ease;
+  }
+  #menu-toggle.open svg {
+    transform: rotate(90deg);
+  }
+  /* Micro interaction for mobile menu */
+#mobile-menu {
+  transform-origin: top center;
+}
+
+#mobile-menu.active {
+  animation: menuPop 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.nav-link.active {
+  color: #fff;
+}
+
+.nav-link.active::after {
+  width: 80%;
+  opacity: 1;
+}
+
+@keyframes menuPop {
+  0% {
+    opacity: 0;
+    transform: translateY(-12px) scale(0.96);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(2px) scale(1.01);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Hamburger tap feedback */
+#menu-toggle:active {
+  transform: scale(0.92);
+}
+
+</style>
+
+<div class="fixed top-6 left-0 w-full z-[100] px-4">
+  <div class="max-w-6xl mx-auto flex items-center justify-between gap-4">
+
+    <!-- LEFT : BRAND (ONE LINE ALWAYS) -->
+    <div class="glass-nav rounded-full px-5 py-2.5 flex items-center gap-4 shadow-2xl whitespace-nowrap">
+      <div class="w-10 h-10 shrink-0 rounded-full bg-white text-black flex items-center justify-center font-black text-base shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+        A
+      </div>
+
+      <div class="flex items-center gap-3 border-l border-white/10 pl-4">
+        <span class="font-extrabold text-[13px] uppercase tracking-wider text-white">
+          Anurag
+        </span>
+        <span class="text-[13px] font-medium uppercase tracking-[0.2em] text-slate-500">
+          WebD
+        </span>
+      </div>
+    </div>
+
+    <!-- CENTER : DESKTOP NAV -->
+    <div class="glass-nav rounded-full px-10 py-4 shadow-2xl hidden md:flex">
+      <nav class="flex items-center gap-12 text-[11px] font-semibold uppercase tracking-[0.3em] text-slate-400">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="services.html" class="nav-link">Services</a>
+         <a href="studio.html" class="nav-link">Studio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+
+    <!-- RIGHT : CONNECT + HAMBURGER (ALWAYS RIGHT MOST) -->
+    <div class="glass-nav rounded-full px-3 py-2 flex items-center gap-2 shadow-2xl">
+
+      <a href="https://wa.me/917985555982"
+         class="btn-whatsapp px-6 py-2.5 rounded-full text-white text-[11px] font-bold uppercase tracking-widest hidden sm:inline-flex">
+        Connect
+      </a>
+
+      <button id="menu-toggle"
+        class="md:hidden w-11 h-11 flex items-center justify-center text-white rounded-full hover:bg-white/10 transition-colors">
+        <svg class="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU (UNCHANGED STRUCTURE) -->
+  <div id="mobile-menu"
+       class="md:hidden glass-nav rounded-[2.5rem] max-w-[90%] mx-auto mt-6 p-10 shadow-3xl text-center">
+    <div class="flex flex-col gap-10 text-xl font-bold tracking-widest uppercase">
+      <a href="index.html" class="text-white hover:text-indigo-400 transition-colors">Home</a>
+      <a href="work.html" class="text-slate-400 hover:text-white transition-colors">Work</a>
+      <a href="services.html" class="text-slate-400 hover:text-white transition-colors">Services</a>
+      <a href="studio.html" class="text-slate-400 hover:text-white transition-colors">Studio</a>
+      <a href="contact.html" class="text-slate-400 hover:text-white transition-colors">Contact</a>
+
+      <a href="https://wa.me/917985555982"
+         class="btn-whatsapp mt-6 py-4 rounded-3xl text-white text-sm font-bold uppercase tracking-widest">
+        WhatsApp Me
+      </a>
+    </div>
+  </div>
+</div>
