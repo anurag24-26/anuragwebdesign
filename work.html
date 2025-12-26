@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capabilities | Anurag Web Design Barhalganj</title>
+  <meta name="description" content="Technical expertise of Anurag Web Design. High-performance development using React, Node.js, and Modern CSS in Barhalganj, Gorakhpur." />
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    :root {
+      --bg-deep: #0B0B0E;
+      --surface-1: #151821;
+      --glass-border: rgba(255, 255, 255, 0.06);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-deep);
+      color: #E2E8F0;
+      overflow-x: hidden;
+    }
+
+    /* Glassmorphism Pill Nav */
+    .glass-nav {
+      background: rgba(15, 17, 21, 0.75);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+    }
+
+    /* Tech Card - Deep Material Feel */
+    .tech-card {
+      background: var(--surface-1);
+      border: 1px solid var(--glass-border);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tech-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(129, 140, 248, 0.4);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Subtle Inner Glow on Hover */
+    .tech-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(129, 140, 248, 0.05), transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .tech-card:hover::before {
+      opacity: 1;
+    }
+
+    /* Nav Interaction */
+    .nav-link { position: relative; transition: all 0.3s ease; }
+    .nav-link::after {
+      content: ''; position: absolute; width: 0; height: 1px;
+      bottom: -2px; left: 50%; background: #818cf8;
+      transition: all 0.3s ease; transform: translateX(-50%);
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* WhatsApp Button */
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      box-shadow: 0 8px 20px -6px rgba(37, 211, 102, 0.4);
+    }
+
+    /* 3D Image - Transparent Background Approach */
+    .person-glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(129, 140, 248, 0.15) 0%, transparent 70%);
+      z-index: -1;
+      filter: blur(50px);
+    }
+
+    #mobile-menu { transition: all 0.4s ease; opacity: 0; pointer-events: none; }
+    #mobile-menu.active { opacity: 1; pointer-events: all; transform: translateY(0); }
+  </style>
+</head>
+
+<body class="antialiased">
+
+  <div class="fixed top-6 left-0 w-full z-[100] px-4">
+    <nav class="max-w-6xl mx-auto glass-nav rounded-full px-3 py-2.5 shadow-2xl">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3 pl-4">
+          <div class="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-black text-lg">A</div>
+          <span class="font-bold text-white tracking-tight hidden sm:block uppercase">ANURAG <span class="text-slate-500 font-light">STUDIO</span></span>
+        </div>
+
+        <div class="hidden md:flex items-center gap-10 font-medium text-[13px] uppercase tracking-[0.2em] text-slate-400">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="work.html" class="nav-link text-white">Work</a>
+          <a href="#" class="nav-link">Studio</a>
+          <a href="#" class="nav-link">Contact</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <a href="https://wa.me/91XXXXXXXXXX" class="btn-whatsapp px-6 py-2.5 rounded-full text-white text-[13px] font-bold flex items-center gap-2 transition-transform hover:scale-105">
+            <span class="uppercase tracking-widest">Connect</span>
+          </a>
+          <button id="menu-toggle" class="md:hidden w-10 h-10 flex items-center justify-center text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="md:hidden absolute top-16 left-0 w-full bg-[#151821] rounded-3xl p-6 shadow-2xl border border-white/10">
+        <div class="flex flex-col gap-6 text-center font-bold text-lg">
+          <a href="index.html" class="text-slate-400">Home</a>
+          <a href="work.html" class="text-white">Work</a>
+          <a href="#" class="text-slate-400">Studio</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="h-40"></div>
+
+  <main class="max-w-7xl mx-auto px-6 pb-32">
+    <header class="mb-24">
+        <h2 class="text-indigo-400 font-bold tracking-[0.4em] uppercase text-xs mb-4">The Stack</h2>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">Expertise & <br/><span class="text-slate-500">Technologies.</span></h1>
+        <p class="max-w-2xl text-lg text-slate-400">Combining aesthetic design with enterprise-grade technology to build the most robust digital products in Barhalganj.</p>
+    </header>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="tech-card p-8 rounded-[2rem]">
+        <div class="text-orange-500 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></div>
+        <h3 class="text-xl font-bold text-white mb-2">HTML5</h3>
+        <p class="text-sm">Semantic architecture for superior accessibility and SEO ranking.</p>
+      </div>
+
+      <div class="tech-card p-8 rounded-[2rem]">
+        <div class="text-sky-400 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 0l-12 12 12 12 12-12-12-12zm6.003 12.003h-12.006l6.003-6.003 6.003 6.003z"/></svg></div>
+        <h3 class="text-xl font-bold text-white mb-2">Modern CSS</h3>
+        <p class="text-sm">Tailwind CSS & Framer Motion for high-end cinematic animations.</p>
+      </div>
+
+      <div class="tech-card p-8 rounded-[2rem]">
+        <div class="text-indigo-400 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-.697-8.21c.205.426.471.826.791 1.189l.863-.863c-.156-.251-.295-.515-.411-.795l-1.243.469zm3.179 4.389l1.243.469c-.116.28-.255.544-.411.795l-.863-.863c.32-.363.586-.763.791-1.189l-.76.012z"/></svg></div>
+        <h3 class="text-xl font-bold text-white mb-2">React JS</h3>
+        <p class="text-sm">Building dynamic, fast, and scalable single-page applications.</p>
+      </div>
+
+      <div class="tech-card p-8 rounded-[2rem]">
+        <div class="text-emerald-500 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24l-12-6.75v-13.5l12-6.75 12 6.75v13.5z"/></svg></div>
+        <h3 class="text-xl font-bold text-white mb-2">Node.js</h3>
+        <p class="text-sm">High-performance server-side logic and real-time API development.</p>
+      </div>
+
+    </div>
+
+    <div class="mt-32 grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-3xl font-bold text-white mb-6">Built for Search Engines. <br/><span class="text-indigo-400">Optimized for Humans.</span></h2>
+            <ul class="space-y-6">
+                <li class="flex gap-4">
+                    <div class="text-indigo-500">✔</div>
+                    <div><b class="text-white">Core Web Vitals:</b> Every project is tuned to score 90+ on Google PageSpeed Insights.</div>
+                </li>
+                <li class="flex gap-4">
+                    <div class="text-indigo-500">✔</div>
+                    <div><b class="text-white">Schema Markup:</b> Local JSON-LD injection for Barhalganj/Gorakhpur map dominance.</div>
+                </li>
+                <li class="flex gap-4">
+                    <div class="text-indigo-500">✔</div>
+                    <div><b class="text-white">Accessibility (a11y):</b> Inclusive design ensuring every user can interact with your brand.</div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="relative flex justify-center items-center py-20">
+            <div class="person-glow"></div>
+            <img src="webAnurag.jpeg" alt="Anurag Tech Stack" class="relative z-10 w-full max-w-sm drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] grayscale hover:grayscale-0 transition-all duration-700">
+        </div>
+    </div>
+  </main>
+
+  <footer class="py-20 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
+      <div class="text-[11px] uppercase tracking-[0.4em] text-slate-600">
+        &copy; 2025 Anurag Web Design &bull; Barhalganj &bull; Gorakhpur
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    toggleBtn.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+  </script>
+</body>
+</html>
