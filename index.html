@@ -223,16 +223,6 @@ function initNavbarLogic() {
         mobileMenu.classList.toggle('active');
     }, 10);
   });
-// After fetching navbar into #navbar-container
-const links = document.querySelectorAll('#navbar-container .nav-link');
-const currentPath = window.location.pathname.split("/").pop();
-
-links.forEach(link => {
-  const href = link.getAttribute('href');
-  if(href === currentPath || (href === 'index.html' && currentPath === '')) {
-    link.classList.add('active');
-  }
-});
 
   // Close when clicking outside
   document.addEventListener('click', (e) => {
