@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anurag24-26.github.io/anuragwebdesign/sitemap.xml
