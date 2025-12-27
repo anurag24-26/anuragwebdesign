@@ -3,190 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Capabilities | Anurag Web Design Barhalganj</title>
-  <meta name="description" content="Technical expertise of Anurag Web Design. High-performance development using React, Node.js, and Modern CSS in Barhalganj, Gorakhpur." />
-  
+  <title>Work & Capabilities | Anurag Web Design</title>
+  <meta name="description" content="Selected web design work by Anurag. Websites for coaching institutes, conferences, and local businesses focused on clarity, trust, and performance." />
+
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    
-    :root {
-      --bg-deep: #0B0B0E;
-      --surface-1: #151821;
-      --glass-border: rgba(255, 255, 255, 0.06);
-    }
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-deep);
+      background: #0B0B0E;
       color: #E2E8F0;
-      overflow-x: hidden;
     }
 
-    /* Glassmorphism Pill Nav */
-    .glass-nav {
-      background: rgba(15, 17, 21, 0.75);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--glass-border);
+    .card {
+      background: #151821;
+      border: 1px solid rgba(255,255,255,0.06);
+      transition: all .4s ease;
     }
 
-    /* Tech Card - Deep Material Feel */
-    .tech-card {
-      background: var(--surface-1);
-      border: 1px solid var(--glass-border);
-      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-      position: relative;
-      overflow: hidden;
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(129,140,248,.4);
     }
-
-    .tech-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(129, 140, 248, 0.4);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7);
-    }
-
-    /* Subtle Inner Glow on Hover */
-    .tech-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right, rgba(129, 140, 248, 0.05), transparent);
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .tech-card:hover::before {
-      opacity: 1;
-    }
-
-    /* 3D Image - Transparent Background Approach */
-    .person-glow {
-      position: absolute;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(129, 140, 248, 0.15) 0%, transparent 70%);
-      z-index: -1;
-      filter: blur(50px);
-    }
-
   </style>
 </head>
 
 <body class="antialiased">
+
 <div id="navbar"></div>
-  <div class="h-40"></div>
+<div class="h-32"></div>
 
-  <main class="max-w-7xl mx-auto px-6 pb-32">
-    <header class="mb-24">
-        <h2 class="text-indigo-400 font-bold tracking-[0.4em] uppercase text-xs mb-4">The Stack</h2>
-        <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6">Expertise & <br/><span class="text-slate-500">Technologies.</span></h1>
-        <p class="max-w-2xl text-lg text-slate-400">Combining aesthetic design with enterprise-grade technology to build the most robust digital products in Barhalganj.</p>
-    </header>
+<main class="max-w-7xl mx-auto px-6 pb-32">
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <!-- HERO -->
+  <header class="mb-24">
+    <h2 class="text-indigo-400 uppercase tracking-[0.3em] text-xs mb-4">
+      Selected Work & Capabilities
+    </h2>
+    <h1 class="text-5xl md:text-6xl font-extrabold text-white mb-6">
+      Websites Built for <br>
+      <span class="text-slate-500">Real Institutions & Businesses</span>
+    </h1>
+    <p class="max-w-2xl text-lg text-slate-400">
+      I design and build fast, clear, and professional websites that help
+      institutes and businesses build trust and get inquiries.
+    </p>
+  </header>
+
+  <!-- PROJECTS -->
+  <section class="space-y-16">
+
+    <!-- Project 1 -->
+    <div class="card rounded-3xl p-8 grid lg:grid-cols-2 gap-10 items-center">
+      <img src="Project1.png" alt="Saraswati Coaching Center Website"
+           class="w-full h-64 object-cover rounded-2xl bg-slate-800">
+
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-3">
+          Saraswati Coaching Center
+        </h3>
+        <p class="text-slate-400 mb-4">
+          Designed and developed a complete coaching institute website to help
+          parents easily understand courses, class structure, and contact
+          details on mobile devices.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-2">
+          <li>✔ Clear course & class structure</li>
+          <li>✔ Mobile-first design</li>
+          <li>✔ Fast loading & SEO-friendly</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <!-- Project 2 -->
+    <div class="card rounded-3xl p-8 grid lg:grid-cols-2 gap-10 items-center">
+      <img src="Project2.png" alt="CCIS Electronics Conference Website"
+      class="w-full h-64 object-cover rounded-2xl bg-slate-800">
       
-      <div class="tech-card p-8 rounded-[2rem]">
-        <div class="text-orange-500 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"/></svg></div>
-        <h3 class="text-xl font-bold text-white mb-2">HTML5</h3>
-        <p class="text-sm">Semantic architecture for superior accessibility and SEO ranking.</p>
-      </div>
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-3">
+          IronEdge
+        </h3>
+        <p class="text-slate-400 mb-4">
+          Designed a modern gym website focused on showcasing facilities, training
+          programs, and helping potential members quickly get in touch.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-2">
+          <li>✔ Program & membership highlights</li>
+  <li>✔ Strong visual sections for facilities</li>
+  <li>✔ Mobile-first layout with quick contact access</li>
+</ul>
 
-      <div class="tech-card p-8 rounded-[2rem]">
-        <div class="text-sky-400 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12.001 0l-12 12 12 12 12-12-12-12zm6.003 12.003h-12.006l6.003-6.003 6.003 6.003z"/></svg></div>
-        <h3 class="text-xl font-bold text-white mb-2">Modern CSS</h3>
-        <p class="text-sm">Tailwind CSS & Framer Motion for high-end cinematic animations.</p>
       </div>
-
-      <div class="tech-card p-8 rounded-[2rem]">
-        <div class="text-indigo-400 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm-.697-8.21c.205.426.471.826.791 1.189l.863-.863c-.156-.251-.295-.515-.411-.795l-1.243.469zm3.179 4.389l1.243.469c-.116.28-.255.544-.411.795l-.863-.863c.32-.363.586-.763.791-1.189l-.76.012z"/></svg></div>
-        <h3 class="text-xl font-bold text-white mb-2">React JS</h3>
-        <p class="text-sm">Building dynamic, fast, and scalable single-page applications.</p>
-      </div>
-
-      <div class="tech-card p-8 rounded-[2rem]">
-        <div class="text-emerald-500 mb-6"><svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 24l-12-6.75v-13.5l12-6.75 12 6.75v13.5z"/></svg></div>
-        <h3 class="text-xl font-bold text-white mb-2">Node.js</h3>
-        <p class="text-sm">High-performance server-side logic and real-time API development.</p>
-      </div>
-
     </div>
+      <!-- Project 2 -->
+      <div class="card rounded-3xl p-8 grid lg:grid-cols-2 gap-10 items-center">
+      <img src="Project3.png" alt="CCIS Electronics Conference Website"
+           class="w-full h-64 object-cover rounded-2xl bg-slate-800">
 
-    <div class="mt-32 grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-            <h2 class="text-3xl font-bold text-white mb-6">Built for Search Engines. <br/><span class="text-indigo-400">Optimized for Humans.</span></h2>
-            <ul class="space-y-6">
-                <li class="flex gap-4">
-                    <div class="text-indigo-500">✔</div>
-                    <div><b class="text-white">Core Web Vitals:</b> Every project is tuned to score 90+ on Google PageSpeed Insights.</div>
-                </li>
-                <li class="flex gap-4">
-                    <div class="text-indigo-500">✔</div>
-                    <div><b class="text-white">Schema Markup:</b> Local JSON-LD injection for Barhalganj/Gorakhpur map dominance.</div>
-                </li>
-                <li class="flex gap-4">
-                    <div class="text-indigo-500">✔</div>
-                    <div><b class="text-white">Accessibility (a11y):</b> Inclusive design ensuring every user can interact with your brand.</div>
-                </li>
-            </ul>
-        </div>
+           <div>
+        <h3 class="text-2xl font-bold text-white mb-3">
+          Raj Studio
+        </h3>
+       <p class="text-slate-400 mb-4">
+         Website concept designed for a photography studio to present work visually,
+         build trust, and make client inquiries simple and direct.
+        </p>
+        <ul class="text-sm text-slate-400 space-y-2">
+          <li>✔ Image-focused gallery layout</li>
+          <li>✔ Clear service & portfolio sections</li>
+          <li>✔ Easy contact and inquiry flow</li>
+        </ul>
         
-        <div class="relative flex justify-center items-center py-20">
-            <div class="person-glow"></div>
-            <img src="webAnurag.jpeg" alt="Anurag Tech Stack" class="relative z-10 w-full max-w-sm drop-shadow-[0_35px_35px_rgba(0,0,0,0.8)] grayscale hover:grayscale-0 transition-all duration-700">
+      </div>
+      <div class="card rounded-3xl p-8 grid lg:grid-cols-2 gap-10 items-center">
+        <img src="ongoingproject.webp" alt="CCIS Electronics Conference Website"
+             class="w-full h-64 object-cover rounded-2xl bg-slate-800">
+    
+        <div>
+          <h3 class="text-2xl font-bold text-white mb-3">
+            CCIS Electronics 2026 (Ongoing)
+          </h3>
+          <p class="text-slate-400 mb-4">
+            Currently building an academic conference website with structured
+            information, submission sections, and responsive layouts for students
+            and faculty.
+          </p>
+          <ul class="text-sm text-slate-400 space-y-2">
+            <li>✔ Conference & submission pages</li>
+            <li>✔ Clean academic UI</li>
+            <li>✔ Optimized for all devices</li>
+          </ul>
         </div>
+      </div>
     </div>
-  </main>
 
-  <footer id="footer">
-  </footer>
+  </section>
+
+  <!-- CAPABILITIES -->
+  <section class="mt-32 grid lg:grid-cols-3 gap-8">
+
+    <div class="card p-8 rounded-3xl">
+      <h4 class="text-xl font-bold text-white mb-3">Design & UX</h4>
+      <p class="text-slate-400 text-sm">
+        Clean layouts, strong visual hierarchy, and interfaces that make
+        information easy to understand for parents and customers.
+      </p>
+    </div>
+
+    <div class="card p-8 rounded-3xl">
+      <h4 class="text-xl font-bold text-white mb-3">Performance & SEO</h4>
+      <p class="text-slate-400 text-sm">
+        Fast-loading pages, optimized images, and search-engine-friendly
+        structure to improve visibility and trust.
+      </p>
+    </div>
+
+    <div class="card p-8 rounded-3xl">
+      <h4 class="text-xl font-bold text-white mb-3">Development</h4>
+      <p class="text-slate-400 text-sm">
+        Modern frontend development using React, Tailwind CSS, and clean HTML
+        to ensure scalability and maintainability.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- WHO I WORK WITH -->
+  <section class="mt-32 text-center">
+    <h2 class="text-3xl font-bold text-white mb-6">
+      Who I Work With
+    </h2>
+    <p class="max-w-3xl mx-auto text-slate-400">
+      Coaching institutes, academic conferences, and local businesses that
+      want a professional online presence without unnecessary complexity.
+    </p>
+  </section>
+
+  <!-- CTA -->
+  <section class="mt-32 text-center">
+    <h2 class="text-4xl font-bold text-white mb-6">
+      Need a Website for Your Institute or Business?
+    </h2>
+    <p class="text-slate-400 mb-8">
+      Let’s discuss your requirements and see if I’m a good fit.
+    </p>
+    <a href="contact.html"
+       class="inline-block px-10 py-4 rounded-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold transition">
+      Contact Me
+    </a>
+  </section>
+
+</main>
+
+<footer id="footer"></footer>
+
 
   <script>
- // 1. Fetch the navbar
 fetch("navbar.html")
   .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
-    // 2. Initialize the menu logic ONLY after navbar is injected
-    initNavbarLogic();
-  })
-  .catch(err => console.error("Navbar load failed:", err));
-
-  fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-    // 2. Initialize the menu logic ONLY after navbar is injected
-    initNavbarLogic();
+  .then(html => {
+    document.getElementById("navbar").innerHTML = html;
+    initNavbarLogic(); // CALL ONCE
   })
   .catch(err => console.error("Navbar load failed:", err));
 
 function initNavbarLogic() {
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
   if (!toggleBtn || !mobileMenu) return;
 
-  toggleBtn.addEventListener('click', (e) => {
+  toggleBtn.onclick = (e) => {
     e.stopPropagation();
-    // Toggle 'hidden' class (Tailwind) and 'active' (your CSS)
-    mobileMenu.classList.toggle('hidden');
-    
-    // Small timeout to allow 'hidden' to be removed before 'active' triggers transform
-    setTimeout(() => {
-        mobileMenu.classList.toggle('active');
-    }, 10);
-  });
+    mobileMenu.classList.toggle("active");
+  };
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
+  document.onclick = (e) => {
     if (!mobileMenu.contains(e.target) && e.target !== toggleBtn) {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('active');
+      mobileMenu.classList.remove("active");
     }
-  });
+  };
 }
+</script>
+
+<script>
+ 
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+    
+  })
+  .catch(err => console.error("Navbar load failed:", err));
+
 </script>
 
 </body>

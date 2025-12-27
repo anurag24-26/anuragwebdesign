@@ -60,20 +60,20 @@
     box-shadow: 0 15px 25px -8px rgba(37, 211, 102, 0.6);
   }
 
-  /* Mobile Menu Logic */
-  #mobile-menu {
-    display: none; /* Crucial: Prevents invisible blocking */
-    opacity: 0;
-    transform: translateY(-15px) scale(0.95);
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    z-index: 99;
-  }
+ /* Replace your existing #mobile-menu css with this */
+/* Replace your existing #mobile-menu css with this */
+#mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(0.95);
+  transition: all 0.3s ease;
+}
 
-  #mobile-menu.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+#mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
 
   /* Menu Toggle Animation */
   #menu-toggle svg {
@@ -186,3 +186,4 @@
     </div>
   </div>
 </div>
+

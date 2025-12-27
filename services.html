@@ -74,51 +74,48 @@
   </main>
    <footer id="footer">
   </footer>
-<script>
- // 1. Fetch the navbar
+
+
+  
+  <script>
 fetch("navbar.html")
   .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
-    // 2. Initialize the menu logic ONLY after navbar is injected
-    initNavbarLogic();
-  })
-  .catch(err => console.error("Navbar load failed:", err));
-
-  fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-    // 2. Initialize the menu logic ONLY after navbar is injected
-    initNavbarLogic();
+  .then(html => {
+    document.getElementById("navbar").innerHTML = html;
+    initNavbarLogic(); // CALL ONCE
   })
   .catch(err => console.error("Navbar load failed:", err));
 
 function initNavbarLogic() {
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
   if (!toggleBtn || !mobileMenu) return;
 
-  toggleBtn.addEventListener('click', (e) => {
+  toggleBtn.onclick = (e) => {
     e.stopPropagation();
-    // Toggle 'hidden' class (Tailwind) and 'active' (your CSS)
-    mobileMenu.classList.toggle('hidden');
-    
-    // Small timeout to allow 'hidden' to be removed before 'active' triggers transform
-    setTimeout(() => {
-        mobileMenu.classList.toggle('active');
-    }, 10);
-  });
+    mobileMenu.classList.toggle("active");
+  };
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
+  document.onclick = (e) => {
     if (!mobileMenu.contains(e.target) && e.target !== toggleBtn) {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('active');
+      mobileMenu.classList.remove("active");
     }
-  });
+  };
 }
 </script>
+
+<script>
+ 
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+    
+  })
+  .catch(err => console.error("Navbar load failed:", err));
+
+</script>
+
 </body>
 </html>

@@ -119,10 +119,10 @@
       </p>
 
       <div class="flex flex-wrap gap-6">
-        <a href="#" class="px-8 py-4 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest hover:bg-slate-200 transition-all active:scale-95 shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
+        <a href="contact.html" class="px-8 py-4 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest hover:bg-slate-200 transition-all active:scale-95 shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
           Start Project
         </a>
-        <a href="#" class="px-8 py-4 border border-white/10 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-white">
+        <a href="work.html" class="px-8 py-4 border border-white/10 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-white">
           View Work
         </a>
       </div>
@@ -187,51 +187,44 @@
 
   <footer id="footer"></footer>
 
-<script>
- // 1. Fetch the navbar
+  <script>
 fetch("navbar.html")
   .then(res => res.text())
-  .then(data => {
-    document.getElementById("navbar").innerHTML = data;
-    // 2. Initialize the menu logic ONLY after navbar is injected
-    initNavbarLogic();
-  })
-  .catch(err => console.error("Navbar load failed:", err));
-
-  fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-    // 2. Initialize the menu logic ONLY after navbar is injected
-    initNavbarLogic();
+  .then(html => {
+    document.getElementById("navbar").innerHTML = html;
+    initNavbarLogic(); // CALL ONCE
   })
   .catch(err => console.error("Navbar load failed:", err));
 
 function initNavbarLogic() {
-  const toggleBtn = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
+  const toggleBtn = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
 
   if (!toggleBtn || !mobileMenu) return;
 
-  toggleBtn.addEventListener('click', (e) => {
+  toggleBtn.onclick = (e) => {
     e.stopPropagation();
-    // Toggle 'hidden' class (Tailwind) and 'active' (your CSS)
-    mobileMenu.classList.toggle('hidden');
-    
-    // Small timeout to allow 'hidden' to be removed before 'active' triggers transform
-    setTimeout(() => {
-        mobileMenu.classList.toggle('active');
-    }, 10);
-  });
+    mobileMenu.classList.toggle("active");
+  };
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
+  document.onclick = (e) => {
     if (!mobileMenu.contains(e.target) && e.target !== toggleBtn) {
-      mobileMenu.classList.add('hidden');
-      mobileMenu.classList.remove('active');
+      mobileMenu.classList.remove("active");
     }
-  });
+  };
 }
+</script>
+
+<script>
+ 
+fetch("footer.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("footer").innerHTML = data;
+    
+  })
+  .catch(err => console.error("Navbar load failed:", err));
+
 </script>
 
 </body>
