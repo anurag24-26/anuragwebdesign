@@ -154,10 +154,13 @@ fetch("footer.html")
 
 <!-- EMAILJS -->
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 <script>
+  // INIT
   emailjs.init("Q2tJ6L9FWNZJSFLZc"); // PUBLIC KEY
 
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     const btn = this.querySelector("button");
@@ -165,8 +168,8 @@ fetch("footer.html")
     btn.disabled = true;
 
     emailjs.sendForm(
-      "service_yq5uen9",          // 🔴 REPLACE THIS
-      "KD6Qi3TuWHoiEFDU5a98c",
+      "service_yq5uen9",      // ✅ YOUR SERVICE ID
+      "template_gb9rsos",     // ✅ REAL TEMPLATE ID (example)
       this
     ).then(
       () => {
@@ -177,11 +180,13 @@ fetch("footer.html")
       (error) => {
         btn.innerText = "Send Message";
         btn.disabled = false;
-        alert("Error: " + error.text);
+        console.error(error);
+        alert("Email failed. Check console.");
       }
     );
   });
 </script>
+
 
 </body>
 </html>
