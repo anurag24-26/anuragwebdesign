@@ -87,27 +87,39 @@
     </div>
 
     <!-- RIGHT (ABSTRACT VISUAL) -->
-    <div class="flex justify-center lg:justify-end">
-      <div class="relative w-full max-w-[450px] aspect-[4/5] rounded-[3rem] overflow-hidden
-        border border-white/10
-        abstract-visual
-        shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]
-        backdrop-blur-sm
-        transition-transform duration-700 hover:rotate-2">
+   <!-- RIGHT (ABSTRACT VISUAL) -->
+<div class="flex justify-center lg:justify-end">
+  <div class="relative w-full max-w-[450px] aspect-[4/5] rounded-[3rem] overflow-hidden
+      border border-white/10
+      shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]
+      backdrop-blur-sm
+      transition-transform duration-700 hover:rotate-2">
 
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-white/5"></div>
+    <!-- Doodle Image -->
+    <img 
+      src="dddd.jpg"
+      alt="Creative doodle illustration"
+      class="absolute inset-0 w-full h-full object-contain 
+             opacity-80 mix-blend-screen 
+             scale-90 
+             transition-transform duration-700 group-hover:scale-95"
+    />
 
-        <div class="absolute bottom-8 left-8 right-8 glass-nav p-6 rounded-3xl flex justify-between items-center">
-          <div>
-            <p class="text-white text-sm font-bold m-0">Anurag Web Studio</p>
-            <p class="text-xs text-slate-500 m-0 leading-none">Digital Design & Development</p>
-          </div>
-          <div class="text-[10px] bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">
-            GORAKHPUR · UP
-          </div>
-        </div>
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-white/5"></div>
+
+    <!-- Glass card with business name -->
+    <div class="absolute bottom-8 left-8 right-8 glass-nav p-6 rounded-3xl flex justify-between items-center">
+      <div>
+        <p class="text-white text-sm font-bold m-0">BizWeb Solutions</p>
+        <p class="text-xs text-slate-500 m-0 leading-none">Digital Design & Development</p>
+      </div>
+      <div class="text-[10px] bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">
+        GORAKHPUR · UP
       </div>
     </div>
+  </div>
+</div>
 
   </section>
 
