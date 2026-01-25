@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anurag Web Design | Premium Digital Studio Barhalganj</title>
-  <meta name="description" content="Ultra-premium web design studio in Barhalganj focusing on high-end materialistic UI/UX and local business growth in Gorakhpur." />
+  <title>Anurag Web Studio | Digital Experiences Barhalganj</title>
+  <meta name="description" content="Premium digital studio in Barhalganj delivering high-performance websites, modern UI/UX, and growth-focused solutions for businesses in Gorakhpur." />
   
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-    
+
     :root {
       --bg-deep: #0B0B0E;
       --surface-1: #151821;
@@ -35,151 +35,108 @@
     .glass-nav {
       background: rgba(15, 17, 21, 0.75);
       backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
       border: 1px solid var(--glass-border);
     }
-
-    .nav-link {
-      position: relative;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 1px;
-      bottom: -2px;
-      left: 50%;
-      background: #818cf8;
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-      box-shadow: 0 0 8px #818cf8;
-    }
-    .nav-link:hover::after { width: 100%; }
-    .nav-link:hover { color: #fff; text-shadow: 0 0 15px rgba(255,255,255,0.3); }
-
-    .image-3d-holder {
-      position: relative;
-      background: none;
-      perspective: 1000px;
-    }
-    .image-3d-holder::after {
-  content: '';
-  position: absolute;
-  inset: 20%;
-  background: radial-gradient(
-    circle,
-    rgba(99,102,241,0.12),
-    transparent 70%
-  );
-  filter: blur(60px);
-  z-index: -1;
-}
-
-    .image-3d-holder::before {
-      content: '';
-      position: absolute;
-      inset: -20px;
-      background:none;
-      filter: blur(40px);
-      z-index: -1;
-    }
-
-   
-   
 
     h1 { letter-spacing: -0.04em; line-height: 1.1; }
     p { line-height: 1.8; color: #94A3B8; }
 
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: var(--bg-deep); }
-    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    .abstract-visual {
+      background:
+        radial-gradient(circle at 30% 30%, rgba(99,102,241,0.35), transparent 60%),
+        radial-gradient(circle at 70% 70%, rgba(236,72,153,0.25), transparent 60%);
+    }
   </style>
 </head>
 
 <body class="antialiased">
 
   <div id="navbar"></div>
-
   <div class="h-32"></div>
 
+  <!-- HERO -->
   <section class="max-w-7xl mx-auto px-6 pt-20 pb-32 grid lg:grid-cols-2 gap-16 items-center">
-    
+
+    <!-- LEFT -->
     <div>
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/5 bg-white/5 text-[11px] font-bold tracking-[0.3em] text-slate-500 uppercase mb-8">
-        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span> Available in Barhalganj
+        <span class="w-2 h-2 rounded-full bg-indigo-500 animate-pulse"></span>
+        Serving Barhalganj & Gorakhpur
       </div>
-      
+
       <h1 class="text-6xl md:text-8xl font-extrabold text-white mb-8">
-        Digital <br/><span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-slate-500">Experiences.</span>
+        Digital <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-slate-500">
+          Experiences.
+        </span>
       </h1>
 
       <p class="text-lg max-w-lg mb-12">
-        We craft high-end websites for Barhalganj's leading brands. Merging materialistic depth with cutting-edge performance across Gorakhpur.
+        We design and build high-impact websites that combine modern aesthetics, strong performance,
+        and business-focused strategy — crafted for brands that want to grow online.
       </p>
 
       <div class="flex flex-wrap gap-6">
         <a href="contact.html" class="px-8 py-4 bg-white text-black rounded-full font-bold text-sm uppercase tracking-widest hover:bg-slate-200 transition-all active:scale-95 shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
-          Start Project
+          Start a Project
         </a>
         <a href="work.html" class="px-8 py-4 border border-white/10 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-white/5 transition-all text-white">
-          View Work
+          View Portfolio
         </a>
       </div>
     </div>
 
-    <div class="image-3d-holder flex justify-center lg:justify-end">
-      <div class="relative w-full max-w-[450px] aspect-[4/5] rounded-[3rem] overflow-hidden 
-            border border-white/10 
-            bg-transparent 
-            shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]
-            backdrop-blur-sm
-            group transition-transform duration-700 hover:rotate-2">
+    <!-- RIGHT (ABSTRACT VISUAL) -->
+    <div class="flex justify-center lg:justify-end">
+      <div class="relative w-full max-w-[450px] aspect-[4/5] rounded-[3rem] overflow-hidden
+        border border-white/10
+        abstract-visual
+        shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]
+        backdrop-blur-sm
+        transition-transform duration-700 hover:rotate-2">
 
-      <img 
-          src="webAnurag.png" 
-          alt="Anurag Web Design" 
-          class="w-full h-full object-cover grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-        />
-        
-        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-white/5 pointer-events-none"></div>
-        
-        <div class="absolute bottom-8 left-8 right-8 glass-nav p-6 rounded-3xl border border-white/10 flex justify-between items-center">
-            <div>
-                <p class="text-white text-sm font-bold m-0">Anurag</p>
-                <p class="text-xs text-slate-500 m-0 leading-none">Creative Director</p>
-            </div>
-            <div class="text-[10px] bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">BARHALGANJ, GKP</div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-white/5"></div>
+
+        <div class="absolute bottom-8 left-8 right-8 glass-nav p-6 rounded-3xl flex justify-between items-center">
+          <div>
+            <p class="text-white text-sm font-bold m-0">Anurag Web Studio</p>
+            <p class="text-xs text-slate-500 m-0 leading-none">Digital Design & Development</p>
+          </div>
+          <div class="text-[10px] bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/30">
+            GORAKHPUR · UP
+          </div>
         </div>
       </div>
     </div>
+
   </section>
 
+  <!-- SERVICES -->
   <section class="max-w-7xl mx-auto px-6 py-20 border-t border-white/5">
     <div class="grid md:grid-cols-3 gap-8">
-      
-      <div class="mat-elevated-1 p-10 rounded-[2.5rem] group hover:bg-[#1C1F2A] transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-indigo-500/10 group-hover:border-indigo-500/30 transition-colors">
-          <svg class="w-6 h-6 text-slate-400 group-hover:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Material UI/UX</h3>
-        <p>Premium interfaces built with depth and precision for modern businesses in Gorakhpur.</p>
+
+      <div class="mat-elevated-1 p-10 rounded-[2.5rem] hover:bg-[#1C1F2A] transition-all">
+        <h3 class="text-2xl font-bold text-white mb-4">Premium UI/UX Design</h3>
+        <p>
+          Carefully crafted interfaces focused on clarity, aesthetics, and user experience —
+          designed to convert visitors into customers.
+        </p>
       </div>
 
-      <div class="mat-elevated-1 p-10 rounded-[2.5rem] group hover:bg-[#1C1F2A] transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-indigo-500/10 group-hover:border-indigo-500/30 transition-colors">
-          <svg class="w-6 h-6 text-slate-400 group-hover:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Fast Execution</h3>
-        <p>Lightning-fast websites optimized for mobile users across the Barhalganj region.</p>
+      <div class="mat-elevated-1 p-10 rounded-[2.5rem] hover:bg-[#1C1F2A] transition-all">
+        <h3 class="text-2xl font-bold text-white mb-4">High-Performance Websites</h3>
+        <p>
+          Fast-loading, mobile-first websites built with modern technologies to ensure smooth
+          performance across all devices.
+        </p>
       </div>
 
-      <div class="mat-elevated-1 p-10 rounded-[2.5rem] group hover:bg-[#1C1F2A] transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-indigo-500/10 group-hover:border-indigo-500/30 transition-colors">
-          <svg class="w-6 h-6 text-slate-400 group-hover:text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-        </div>
-        <h3 class="text-2xl font-bold text-white mb-4">Local SEO</h3>
-        <p>Dominating local search results in Barhalganj and Gorakhpur to drive real business growth.</p>
+      <div class="mat-elevated-1 p-10 rounded-[2.5rem] hover:bg-[#1C1F2A] transition-all">
+        <h3 class="text-2xl font-bold text-white mb-4">Local SEO & Visibility</h3>
+        <p>
+          Optimized for local search to help your business stand out in Barhalganj and Gorakhpur,
+          bringing real inquiries and leads.
+        </p>
       </div>
 
     </div>
@@ -187,47 +144,41 @@
 
   <footer id="footer"></footer>
 
+  <!-- NAVBAR -->
   <script>
-fetch("navbar.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("navbar").innerHTML = html;
-    initNavbarLogic(); // CALL ONCE
-  })
-  .catch(err => console.error("Navbar load failed:", err));
+    fetch("navbar.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+        initNavbarLogic();
+      });
 
-function initNavbarLogic() {
-  const toggleBtn = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
+    function initNavbarLogic() {
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (!toggleBtn || !mobileMenu) return;
 
-  if (!toggleBtn || !mobileMenu) return;
+      toggleBtn.onclick = e => {
+        e.stopPropagation();
+        mobileMenu.classList.toggle("active");
+      };
 
-  toggleBtn.onclick = (e) => {
-    e.stopPropagation();
-    mobileMenu.classList.toggle("active");
-  };
-
-  document.onclick = (e) => {
-    if (!mobileMenu.contains(e.target) && e.target !== toggleBtn) {
-      mobileMenu.classList.remove("active");
+      document.onclick = e => {
+        if (!mobileMenu.contains(e.target) && e.target !== toggleBtn) {
+          mobileMenu.classList.remove("active");
+        }
+      };
     }
-  };
-}
-</script>
+  </script>
 
-<script>
- 
-fetch("footer.html")
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById("footer").innerHTML = data;
-    
-  })
-  .catch(err => console.error("Navbar load failed:", err));
-
-</script>
+  <!-- FOOTER -->
+  <script>
+    fetch("footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer").innerHTML = data;
+      });
+  </script>
 
 </body>
-
-
 </html>
